@@ -1,0 +1,203 @@
+USE [master]
+GO
+/****** Object:  Database [dboPruebaComponente]    Script Date: 13/10/2022 5:20:29 p. m. ******/
+CREATE DATABASE [dboPruebaComponente]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'dboPruebaComponente', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\dboPruebaComponente.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'dboPruebaComponente_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\dboPruebaComponente_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT
+GO
+ALTER DATABASE [dboPruebaComponente] SET COMPATIBILITY_LEVEL = 150
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [dboPruebaComponente].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [dboPruebaComponente] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [dboPruebaComponente] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [dboPruebaComponente] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [dboPruebaComponente] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [dboPruebaComponente] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [dboPruebaComponente] SET  MULTI_USER 
+GO
+ALTER DATABASE [dboPruebaComponente] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [dboPruebaComponente] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [dboPruebaComponente] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [dboPruebaComponente] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [dboPruebaComponente] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [dboPruebaComponente] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+ALTER DATABASE [dboPruebaComponente] SET QUERY_STORE = OFF
+GO
+USE [dboPruebaComponente]
+GO
+/****** Object:  Table [dbo].[LogTransaccion]    Script Date: 13/10/2022 5:20:29 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[LogTransaccion](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[Metodo] [varchar](max) NOT NULL,
+	[JsonEntrada] [varchar](max) NULL,
+	[JsonSalida] [varchar](max) NULL,
+	[Codigo] [bigint] NOT NULL,
+	[MensajeError] [varchar](max) NULL,
+	[FechaRegistro] [datetime] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Usuario]    Script Date: 13/10/2022 5:20:29 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Usuario](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[Nombre] [varchar](100) NOT NULL,
+	[FechaNacimiento] [datetime] NOT NULL,
+	[Sexo] [varchar](1) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[UsuarioApi]    Script Date: 13/10/2022 5:20:29 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[UsuarioApi](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[UserName] [varchar](20) NOT NULL,
+	[Password] [varchar](500) NOT NULL,
+	[Estado] [bit] NOT NULL,
+	[FechaRegistro] [datetime] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IDX_Nombre]    Script Date: 13/10/2022 5:20:29 p. m. ******/
+CREATE NONCLUSTERED INDEX [IDX_Nombre] ON [dbo].[Usuario]
+(
+	[Nombre] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  StoredProcedure [dbo].[SPCrudUsuarios]    Script Date: 13/10/2022 5:20:29 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Andres Medina Escobar>
+-- Create date: <2022-10-12>
+-- Description:	<Crud Usuarios>
+-- =============================================
+CREATE PROCEDURE [dbo].[SPCrudUsuarios]
+	@ACCION  VARCHAR(3),
+	@ID INT,
+	@NOMBRE VARCHAR(100),
+	@FECHANAC DATE,
+	@SEX VARCHAR(1)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+    --CRUD
+	--ADICIONAR
+	IF @ACCION = 'A'
+		BEGIN
+			INSERT INTO Usuario(Nombre,FechaNacimiento,Sexo) VALUES (@NOMBRE,@FECHANAC,@SEX);
+			SELECT scope_identity();
+			PRINT 'COLOCAR ';
+		END
+
+	--CONSULTAR
+	IF @ACCION = 'C'
+		BEGIN
+			DECLARE @CUENTA INT
+			SELECT @CUENTA = COUNT(1) FROM  Usuario        
+				IF @CUENTA >= 1
+					BEGIN
+						SELECT * FROM  Usuario
+					END
+				ELSE
+					BEGIN
+						PRINT 'NO SE ENCONTRARON REGISTROS'
+				END
+		END
+
+	--CONSULTARID
+	IF @ACCION = 'CID'
+		BEGIN
+			SELECT * FROM  Usuario WHERE Id = @ID
+		END
+
+	--EDITAR
+	IF @ACCION = 'U'
+		BEGIN
+			UPDATE Usuario SET Nombre = @NOMBRE, FechaNacimiento = @FECHANAC, Sexo = @SEX WHERE Id = @ID
+		END
+END
+GO
+USE [master]
+GO
+ALTER DATABASE [dboPruebaComponente] SET  READ_WRITE 
+GO

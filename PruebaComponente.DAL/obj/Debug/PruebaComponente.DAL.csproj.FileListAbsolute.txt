@@ -1,0 +1,12 @@
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.DAL\bin\Debug\PruebaComponente.DAL.dll.config
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.DAL\bin\Debug\PruebaComponente.DAL.dll
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.DAL\bin\Debug\PruebaComponente.DAL.pdb
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.DAL\bin\Debug\EntityFramework.dll
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.DAL\bin\Debug\EntityFramework.xml
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.DAL\obj\Debug\PruebaComponente.DAL.csproj.AssemblyReference.cache
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.DAL\obj\Debug\PruebaComponente.DAL.csproj.CoreCompileInputs.cache
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.DAL\obj\Debug\PruebaComponente.DAL.csproj.CopyComplete
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.DAL\obj\Debug\PruebaComponente.DAL.dll
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.DAL\obj\Debug\PruebaComponente.DAL.pdb

@@ -1,0 +1,17 @@
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\bin\Debug\PruebaComponente.BLL.dll.config
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\bin\Debug\PruebaComponente.BLL.dll
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\bin\Debug\PruebaComponente.BLL.pdb
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\bin\Debug\EntityFramework.dll
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\bin\Debug\PruebaComponente.DAL.dll
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\bin\Debug\PruebaComponente.DAL.pdb
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\bin\Debug\PruebaComponente.DAL.dll.config
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\bin\Debug\EntityFramework.xml
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\obj\Debug\PruebaComponente.BLL.csproj.AssemblyReference.cache
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\obj\Debug\PruebaComponente.BLL.csproj.CoreCompileInputs.cache
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\obj\Debug\PruebaComponente.BLL.csproj.CopyComplete
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\obj\Debug\PruebaComponente.BLL.dll
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\obj\Debug\PruebaComponente.BLL.pdb
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ANDRES M ESCOBAR\source\repos\PruebaComponente\PruebaComponente.BLL\bin\Debug\Newtonsoft.Json.xml
